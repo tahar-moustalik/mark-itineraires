@@ -11,9 +11,9 @@ package metier;
  */
 public class BoiteNuit extends Local{
     private String style;
-    private String capacite;
+    private int capacite;
 
-    public BoiteNuit(String style, String capacite, String libLocal, int nbStars, double prix, String numTel, boolean wifiDispo, boolean toiletteDispo, Ville ville, Adresse adresse, int id) {
+    public BoiteNuit(String style, int capacite, String libLocal, int nbStars, double prix, String numTel, boolean wifiDispo, boolean toiletteDispo, Ville ville, Adresse adresse, int id) {
         super(libLocal, nbStars, prix, numTel, wifiDispo, toiletteDispo, ville, adresse, id);
         this.style = style;
         this.capacite = capacite;
@@ -31,11 +31,11 @@ public class BoiteNuit extends Local{
         this.style = style;
     }
 
-    public String getCapacite() {
+    public int getCapacite() {
         return capacite;
     }
 
-    public void setCapacite(String capacite) {
+    public void setCapacite(int capacite) {
         this.capacite = capacite;
     }
     
