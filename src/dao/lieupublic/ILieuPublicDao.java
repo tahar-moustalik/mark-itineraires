@@ -1,6 +1,6 @@
 package dao.lieupublic;
 
-import java.util.List;
+import java.util.LinkedList;
 import metier.LieuPublic;
 
 /**
@@ -8,10 +8,6 @@ import metier.LieuPublic;
  * @author tahar
  */
 public interface ILieuPublicDao {
-    LieuPublic getLieuPublic(int id);
-    List<LieuPublic> getAllLieuPublics();
-    boolean insertLieuPublic(LieuPublic lieuPublic);
-    boolean updateLieuPublic(LieuPublic lieuPublic);
-    boolean deleteLieuPublic(int id);
+    LinkedList<LieuPublic> getAllLieuPublics();
     
 }

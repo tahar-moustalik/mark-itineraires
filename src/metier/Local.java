@@ -1,91 +1,63 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package metier;
 
-import java.util.ArrayList;
-import java.util.List;
+import controlleurs.algorithme.Haversine;
 
-/**
- *
- * @author tahar
- */
 public abstract class Local {
-    private  final int id;
-    private String libLocal;
-    private int nbStars;
-    private double prix;
-    private String numTel;
-    private boolean wifiDispo;
-    private boolean toiletteDispo;
+    private int id;
+    private double longitude;
+    private double latitude;
+    private String libelle;
+    private int score;
     private Ville ville;
     private Adresse adresse;
-    private List<JourOuverture> joursOuvertures = new ArrayList<>();
+    private double prix;
+    private boolean wifiDsipo;
+    private boolean toiletteDispo;
 
-    public Local(String libLocal, int nbStars, double prix, String numTel, boolean wifiDispo, boolean toiletteDispo, Ville ville, Adresse adresse,int id) {
-        this.libLocal = libLocal;
-        this.nbStars = nbStars;
-        this.prix = prix;
-        this.numTel = numTel;
-        this.wifiDispo = wifiDispo;
-        this.toiletteDispo = toiletteDispo;
+    public Local(int id, double longitude, double latitude, String libelle, int score, Ville ville, Adresse adresse, double prix, boolean wifiDsipo, boolean toiletteDispo) {
+        this.id = id;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.libelle = libelle;
+        this.score = score;
         this.ville = ville;
         this.adresse = adresse;
-        this.id = id;
+        this.prix = prix;
+        this.wifiDsipo = wifiDsipo;
+        this.toiletteDispo = toiletteDispo;
     }
 
-    public String getLibLocal() {
-        return libLocal;
+    
+    
+
+    
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setLibLocal(String libLocal) {
-        this.libLocal = libLocal;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public int getNbStars() {
-        return nbStars;
+    public double getLongitude() {
+        return longitude;
     }
 
-    public void setNbStars(int nbStars) {
-        this.nbStars = nbStars;
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
-    public double getPrix() {
-        return prix;
-    }
-
-    public void setPrix(double prix) {
-        this.prix = prix;
-    }
-
-    public String getNumTel() {
-        return numTel;
-    }
-
-    public void setNumTel(String numTel) {
-        this.numTel = numTel;
-    }
-
-    public boolean isWifiDispo() {
-        return wifiDispo;
-    }
-
-    public void setWifiDispo(boolean wifiDispo) {
-        this.wifiDispo = wifiDispo;
-    }
-
-    public boolean isToiletteDispo() {
-        return toiletteDispo;
-    }
-
-    public void setToiletteDispo(boolean toiletteDispo) {
-        this.toiletteDispo = toiletteDispo;
+    public double getLatitude() {
+        return latitude;
     }
 
     public Ville getVille() {
@@ -104,18 +76,58 @@ public abstract class Local {
         this.adresse = adresse;
     }
 
-    public List<JourOuverture> getJoursOuvertures() {
-        return joursOuvertures;
+    public double getPrix() {
+        return prix;
     }
 
-    public void setJoursOuvertures(List<JourOuverture> joursOuvertures) {
-        this.joursOuvertures = joursOuvertures;
+    public void setPrix(double prix) {
+        this.prix = prix;
     }
-    
-    public void ajouterJourOuverture(JourOuverture jourOuv){
-        joursOuvertures.add(jourOuv);
+
+    public boolean isWifiDsipo() {
+        return wifiDsipo;
     }
-    
-    
-    
+
+    public void setWifiDsipo(boolean wifiDsipo) {
+        this.wifiDsipo = wifiDsipo;
+    }
+
+    public boolean isToiletteDispo() {
+        return toiletteDispo;
+    }
+
+    public void setToiletteDispo(boolean toiletteDispo) {
+        this.toiletteDispo = toiletteDispo;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
+    public static double getDuree(Local local1,Local local2){
+        double distanceEntreLocaux = Haversine.distance(local1.getLatitude(),
+                local1.getLongitude(), local2.getLatitude(), local2.getLongitude());
+        double vitesseMoyenne ;
+        if(distanceEntreLocaux < 4){
+            vitesseMoyenne = 5;
+        }
+        else if(distanceEntreLocaux > 4 && distanceEntreLocaux < 35){
+            vitesseMoyenne = 30;
+        }
+        else if(distanceEntreLocaux > 35 && distanceEntreLocaux < 300){
+            vitesseMoyenne = 120;
+        }
+        else{
+            vitesseMoyenne = 885;
+        }
+        return distanceEntreLocaux / vitesseMoyenne;
+
+    }
 }

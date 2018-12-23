@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/gui/inscription.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/gui/accueil.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/gui/activite.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/controlleurs/algorithme/MinSpanningTree.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/gui/itineraire_detaille.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/gui/list_itineraires.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/dao/lieupublic/LieuPublicDaoImpl.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/metier/Itineraire.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/metier/Local.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/controlleurs/ItineraireControlleur.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/demominiprojet/DemoMiniProjet.java</file>
+            <file>file:/C:/Users/tahar/Documents/GitHub/mark-itineraires/src/metier/Itinerary.java</file>
+        </group>
+    </open-files>
 </project-private>

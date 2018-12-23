@@ -13,11 +13,14 @@ public class Cafe  extends Local{
     private boolean espaceFumeur;
     private boolean tresseDispo;
 
-    public Cafe(boolean espaceFumeur, boolean tresseDispo, String libLocal, int nbStars, double prix, String numTel, boolean wifiDispo, boolean toiletteDispo, Ville ville, Adresse adresse, int id) {
-        super(libLocal, nbStars, prix, numTel, wifiDispo, toiletteDispo, ville, adresse, id);
+    public Cafe(boolean espaceFumeur, boolean tresseDispo, int id, double longitude, double latitude, String libelle, int score, Ville ville, Adresse adresse, double prix, boolean wifiDsipo, boolean toiletteDispo) {
+        super(id, longitude, latitude, libelle, score, ville, adresse, prix, wifiDsipo, toiletteDispo);
         this.espaceFumeur = espaceFumeur;
         this.tresseDispo = tresseDispo;
     }
+
+
+   
 
     
 

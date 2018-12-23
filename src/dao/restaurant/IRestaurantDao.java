@@ -13,9 +13,5 @@ import metier.Restaurant;
  * @author tahar
  */
 public interface IRestaurantDao {
-    Restaurant getRestaurant(int id);
     List<Restaurant> getAllRestaurants();
-    boolean insertRestaurant(Restaurant restaurant);
-    boolean updateRestaurant(Restaurant restaurant);
-    boolean deleteRestaurant(int id);
 }

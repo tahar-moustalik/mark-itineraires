@@ -5,6 +5,9 @@
  */
 package demominiprojet;
 
+import gui.accueil;
+
+
 /**
  *
  * @author tahar
@@ -15,7 +18,9 @@ public class DemoMiniProjet {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new accueil().setVisible(true);
+      
+       
     }
     
 }

@@ -13,12 +13,17 @@ public class BoiteNuit extends Local{
     private String style;
     private int capacite;
 
-    public BoiteNuit(String style, int capacite, String libLocal, int nbStars, double prix, String numTel, boolean wifiDispo, boolean toiletteDispo, Ville ville, Adresse adresse, int id) {
-        super(libLocal, nbStars, prix, numTel, wifiDispo, toiletteDispo, ville, adresse, id);
+    public BoiteNuit(String style, int capacite, int id, double longitude, double latitude, String libelle, int score, Ville ville, Adresse adresse, double prix, boolean wifiDsipo, boolean toiletteDispo) {
+        super(id, longitude, latitude, libelle, score, ville, adresse, prix, wifiDsipo, toiletteDispo);
         this.style = style;
         this.capacite = capacite;
     }
 
+   
+
+    
+
+    
     
 
     public String getStyle() {

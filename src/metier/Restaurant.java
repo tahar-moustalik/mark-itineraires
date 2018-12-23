@@ -15,12 +15,16 @@ public class Restaurant  extends Local{
     private boolean carteAccepte;
     private boolean reservation;
 
-    public Restaurant(int starMichelin, boolean carteAccepte, boolean reservation, String libLocal, int nbStars, double prix, String numTel, boolean wifiDispo, boolean toiletteDispo, Ville ville, Adresse adresse, int id) {
-        super(libLocal, nbStars, prix, numTel, wifiDispo, toiletteDispo, ville, adresse, id);
+    public Restaurant(int starMichelin, boolean carteAccepte, boolean reservation, int id, double longitude, double latitude, String libelle, int score, Ville ville, Adresse adresse, double prix, boolean wifiDsipo, boolean toiletteDispo) {
+        super(id, longitude, latitude, libelle, score, ville, adresse, prix, wifiDsipo, toiletteDispo);
         this.starMichelin = starMichelin;
         this.carteAccepte = carteAccepte;
         this.reservation = reservation;
     }
+
+    
+
+    
 
     
 

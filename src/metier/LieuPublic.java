@@ -9,12 +9,16 @@ public class LieuPublic extends Local{
     private boolean animalAccepte;
     private String typeLieuPublic;
 
-    public LieuPublic(boolean activites, boolean animalAccepte, String typeLieuPublic, String libLocal, int nbStars, double prix, String numTel, boolean wifiDispo, boolean toiletteDispo, Ville ville, Adresse adresse, int id) {
-        super(libLocal, nbStars, prix, numTel, wifiDispo, toiletteDispo, ville, adresse, id);
+    public LieuPublic(boolean activites, boolean animalAccepte, String typeLieuPublic, int id, double longitude, double latitude, String libelle, int score, Ville ville, Adresse adresse, double prix, boolean wifiDsipo, boolean toiletteDispo) {
+        super(id, longitude, latitude, libelle, score, ville, adresse, prix, wifiDsipo, toiletteDispo);
         this.activites = activites;
         this.animalAccepte = animalAccepte;
         this.typeLieuPublic = typeLieuPublic;
     }
+
+    
+
+    
 
     
 

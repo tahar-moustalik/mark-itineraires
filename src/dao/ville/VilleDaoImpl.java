@@ -26,7 +26,7 @@ public class VilleDaoImpl implements IVilleDao{
             if(rs.next())
             {
                 Pays pays = new PaysDaoImpl().getPays(rs.getInt("idPays"));
-                Ville ville = new Ville(rs.getString("libVille"),pays,rs.getInt("id"));
+                Ville ville = new Ville(rs.getString("libVille"),pays,rs.getInt("idVille"));
                 return ville;
             }
         } catch (SQLException ex) {
